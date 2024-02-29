@@ -27,6 +27,16 @@ namespace OrientationExample.iOS
 
             return base.FinishedLaunching(app, options);
         }
+
+        public override UIInterfaceOrientationMask GetSupportedInterfaceOrientations(UIApplication application, UIWindow forWindow)
+        {
+            var mainPageNav = Xamarin.Forms.Application.Current.MainPage.Navigation;
+            if (mainPageNav.NavigationStack.LastOrDefault() is LandscapePage & LandscapePage.isFullScreen)
+            {
+                return UIInterfaceOrientationMask.Landscape;
+            }
+            return UIInterfaceOrientationMask.Portrait;
+        }
     }
 }
 

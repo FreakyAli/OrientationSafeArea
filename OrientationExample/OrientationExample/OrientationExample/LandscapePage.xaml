@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    Title="Landscape page"
+    ios:Page.UseSafeArea="True"
+    x:Class="OrientationExample.LandscapePage">
+    <ContentPage.Content>
+        <Grid RowDefinitions="Auto, *, Auto" BackgroundColor="LightBlue">
+            <Label Grid.Row="0" FontSize="Large" Text="This is where the page shall start"/>
+            <StackLayout Grid.Row="1"  VerticalOptions="Center">
+                <Button FontSize="Large" Clicked="Button_Clicked" Text="Go back"/>
+            </StackLayout>
+            <Label Grid.Row="2" FontSize="Large" Text="This is where the page shall end"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
+

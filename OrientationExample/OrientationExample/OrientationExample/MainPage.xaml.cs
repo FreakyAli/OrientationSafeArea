@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace OrientationExample
 {
@@ -13,6 +7,11 @@ namespace OrientationExample
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        async void Button_Clicked(System.Object sender, System.EventArgs e)
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new LandscapePage());
         }
     }
 }
