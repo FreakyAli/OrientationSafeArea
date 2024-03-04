@@ -28,6 +28,7 @@ namespace OrientationExample.iOS
             return base.FinishedLaunching(app, options);
         }
 
+        [Export("application:supportedInterfaceOrientationsForWindow:")]
         public override UIInterfaceOrientationMask GetSupportedInterfaceOrientations(UIApplication application, UIWindow forWindow)
         {
             var mainPageNav = Xamarin.Forms.Application.Current.MainPage.Navigation;
